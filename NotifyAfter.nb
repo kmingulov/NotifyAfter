@@ -1,0 +1,314 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10686,        305]
+NotebookOptionsPosition[      9538,        260]
+NotebookOutlinePosition[      9917,        276]
+CellTagsIndexPosition[      9874,        273]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["NotifyAfter", "Title",
+ CellChangeTimes->{{3.6622086551906776`*^9, 3.6622086596116047`*^9}}],
+
+Cell[TextData[{
+ StyleBox["NotifyAfter",
+  FontWeight->"Bold"],
+ " is a small package providing only one function\[LongDash]",
+ StyleBox["NotifyAfter",
+  FontSlant->"Italic"],
+ ", which allows user to use notifications about completeness of their code\
+\[CloseCurlyQuote]s evaluation."
+}], "Text",
+ CellChangeTimes->{{3.662208664770588*^9, 3.6622086993544855`*^9}, {
+  3.6622090909612417`*^9, 3.6622091546860027`*^9}}],
+
+Cell[TextData[{
+ StyleBox["Version:",
+  FontWeight->"Bold"],
+ " 1.0 (19.01.2016)\n",
+ StyleBox["License:",
+  FontWeight->"Bold"],
+ " ",
+ ButtonBox["LGPL v3 or higher",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://www.gnu.org/copyleft/lesser.html"], None},
+  ButtonNote->"http://www.gnu.org/copyleft/lesser.html"],
+ "\n",
+ StyleBox["Website:",
+  FontWeight->"Bold"],
+ " ",
+ ButtonBox["github.com/kmingulov/NotifyAfter",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://github.com/kmingulov/NotifyAfter"], None},
+  ButtonNote->"https://github.com/kmingulov/NotifyAfter"]
+}], "Text",
+ CellChangeTimes->{{3.662208715760347*^9, 3.662208812165779*^9}, {
+  3.6622088468270626`*^9, 3.6622088581413383`*^9}, {3.662208984940385*^9, 
+  3.6622089939822383`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Preamble", "Section",
+ CellChangeTimes->{{3.6622087067914214`*^9, 3.6622087080132203`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"BeginPackage", "[", "\"\<NotifyAfter`\>\"", "]"}], ";"}]], "Code",
+ CellChangeTimes->{{3.662209004316101*^9, 3.662209033075654*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", "NotifyAfter", "}"}], ";"}]], "Code",
+ CellChangeTimes->{{3.662209004316101*^9, 3.662209049598379*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Begin", "[", "\"\<`Private`\>\"", "]"}], ";"}]], "Code",
+ CellChangeTimes->{3.6622090388667116`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Messages", "Section",
+ CellChangeTimes->{{3.6622087067914214`*^9, 3.6622087123821087`*^9}, {
+  3.662208828165474*^9, 3.662208829728051*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"NotifyAfter", "::", "usage"}], " ", "=", " ", 
+   "\"\<NotifyAfter[\!\(\*
+StyleBox[\"expr\",
+FontSlant->\"Italic\"]\)] evaluates \!\(\*
+StyleBox[\"expr\",
+FontSlant->\"Italic\"]\), shows notification about completeness and returns \
+the result.\n\nOptional parameters:\n \[Bullet] \!\(\*
+StyleBox[\"Beep\",
+FontSlant->\"Italic\"]\) \[Rule] True/False. Whether a sound must be played \
+when evaluation is complete.\>\""}], ";"}]], "Code",
+ CellChangeTimes->{{3.662209347842244*^9, 3.6622094490338597`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Parameters", "Section",
+ CellChangeTimes->{{3.6622087067914214`*^9, 3.6622087123821087`*^9}, {
+  3.662208828165474*^9, 3.662208840097062*^9}, {3.6622090803704042`*^9, 
+  3.66220908180408*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Options", "[", "NotifyAfter", "]"}], " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"Beep", " ", "\[Rule]", " ", "True"}], "}"}]}], ";"}]], "Code",
+ CellChangeTimes->{{3.662209515055667*^9, 3.662209532276015*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Code", "Section",
+ CellChangeTimes->{{3.6622087067914214`*^9, 3.6622087123821087`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"NotifyAfter", "[", 
+    RowBox[{"expr_", ",", " ", 
+     RowBox[{"OptionsPattern", "[", "]"}]}], "]"}], " ", ":=", " ", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"res", ",", " ", "t"}], "}"}], ",", "\n", "\t", 
+     RowBox[{"(*", " ", 
+      RowBox[{"Running", " ", 
+       RowBox[{"code", "."}]}], " ", "*)"}], "\[IndentingNewLine]", "\t", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"t", ",", " ", "res"}], "}"}], " ", "=", " ", 
+       RowBox[{"AbsoluteTiming", "[", "expr", "]"}]}], ";", "\n", "\t", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+        RowBox[{"Creating", " ", "a", " ", "dialog"}], ",", " ", 
+        RowBox[{"when", " ", "we", " ", "are", " ", 
+         RowBox[{"finished", "."}]}]}], " ", "*)"}], "\[IndentingNewLine]", 
+      "\t", 
+      RowBox[{"CreateDialog", "[", "\[IndentingNewLine]", "\t\t", 
+       RowBox[{
+        RowBox[{"{", "\[IndentingNewLine]", "\t\t\t", 
+         RowBox[{
+          RowBox[{"Cell", "[", 
+           RowBox[{
+            RowBox[{"TextData", "[", 
+             RowBox[{"{", "\n", "\t\t\t\t", 
+              RowBox[{
+              "\"\<Your calculations have been completed!\\n\\nFile: \>\"", 
+               ",", "\n", "\t\t\t\t", 
+               RowBox[{"StyleBox", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Quiet", "@", 
+                   RowBox[{"Check", "[", 
+                    RowBox[{
+                    RowBox[{"NotebookFileName", "[", "]"}], ",", " ", 
+                    "\"\<Untitled\>\""}], "]"}]}], " ", "<>", " ", 
+                  "\"\< (\>\"", " ", "<>", " ", 
+                  RowBox[{"ToString", "[", "$Line", "]"}], " ", "<>", " ", 
+                  "\"\<)\>\""}], ",", " ", 
+                 RowBox[{"FontWeight", " ", "\[Rule]", " ", "\"\<Bold\>\""}], 
+                 ",", " ", 
+                 RowBox[{"FontColor", " ", "\[Rule]", " ", 
+                  RowBox[{"RGBColor", "[", 
+                   RowBox[{"0.", ",", " ", "0.4", ",", " ", "0."}], "]"}]}]}],
+                 "]"}], ",", "\n", "\t\t\t\t", "\"\<\\nTime elapsed: \>\"", 
+               ",", "\n", "\t\t\t\t", 
+               RowBox[{"StyleBox", "[", 
+                RowBox[{
+                 RowBox[{"ToString", "@", 
+                  RowBox[{"N", "[", 
+                   RowBox[{"t", ",", " ", "5"}], "]"}]}], ",", " ", 
+                 RowBox[{"FontWeight", " ", "\[Rule]", " ", "\"\<Bold\>\""}], 
+                 ",", " ", 
+                 RowBox[{"FontColor", " ", "\[Rule]", " ", 
+                  RowBox[{"RGBColor", "[", 
+                   RowBox[{"0.", ",", " ", "0.4", ",", " ", "0."}], "]"}]}]}],
+                 "]"}], ",", "\n", "\t\t\t\t", 
+               "\"\< s.\\n\\nIf you have any other pending evaluation, it is \
+being performed right now.\>\""}], "\n", "\t\t\t", "}"}], "]"}], ",", " ", 
+            "\"\<Text\>\""}], "]"}], ",", "\[IndentingNewLine]", "\t\t\t", 
+          RowBox[{"DefaultButton", "[", "]"}]}], "\[IndentingNewLine]", 
+         "\t\t", "}"}], ",", "\[IndentingNewLine]", "\t\t", 
+        RowBox[{
+        "WindowTitle", " ", "\[Rule]", " ", 
+         "\"\<Evaluation has been completed\>\""}]}], "\[IndentingNewLine]", 
+       "\t", "]"}], ";", "\n", "\t", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Emitting", " ", "a", " ", 
+        RowBox[{"sound", "."}]}], " ", "*)"}], "\n", "\t", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"OptionValue", "[", "Beep", "]"}], ",", "\n", "\t\t", 
+        RowBox[{"Beep", "[", "]"}]}], "\n", "\t", "]"}], ";", "\n", "\t", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Returning", " ", "the", " ", 
+        RowBox[{"result", "."}]}], " ", "*)"}], "\[IndentingNewLine]", "\t", 
+      "res"}]}], "\[IndentingNewLine]", "]"}]}], ";"}]], "Code",
+ CellChangeTimes->{{3.6621719022194433`*^9, 3.6621719585574274`*^9}, {
+   3.662172070594858*^9, 3.6621720716730337`*^9}, {3.6621721307922583`*^9, 
+   3.6621722179022017`*^9}, {3.6621722765534534`*^9, 
+   3.6621723421983547`*^9}, {3.6621723746489067`*^9, 3.662172451920206*^9}, {
+   3.6621725049276667`*^9, 3.662172506083969*^9}, {3.662172549190172*^9, 
+   3.6621725645004406`*^9}, {3.6621726808109727`*^9, 3.662172716361577*^9}, {
+   3.6621727555005164`*^9, 3.662172867789613*^9}, {3.6621729486099186`*^9, 
+   3.662172995173716*^9}, {3.662208588694812*^9, 3.6622086484121943`*^9}, {
+   3.6622092479950447`*^9, 3.662209291749708*^9}, 3.6622093395290203`*^9, {
+   3.6622094790816574`*^9, 3.6622095023639126`*^9}, {3.6622095758045807`*^9, 
+   3.6622096253510847`*^9}, {3.662209977706663*^9, 3.662209978155322*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Attributes", "Section",
+ CellChangeTimes->{{3.6622087067914214`*^9, 3.6622087123821087`*^9}, {
+  3.662208828165474*^9, 3.662208829728051*^9}, {3.662209362817887*^9, 
+  3.6622093642398186`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetAttributes", "[", 
+   RowBox[{"NotifyAfter", ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"HoldFirst", ",", " ", "Protected", ",", " ", "ReadProtected"}], 
+     "}"}]}], "]"}], ";"}]], "Code",
+ CellChangeTimes->{{3.662209347842244*^9, 3.6622093770128946`*^9}, {
+  3.6622094673099537`*^9, 3.66220947520969*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["End", "Section",
+ CellChangeTimes->{{3.6622087067914214`*^9, 3.6622087123821087`*^9}, {
+  3.662208828165474*^9, 3.6622088329058876`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"End", "[", "]"}], ";"}]], "Code",
+ CellChangeTimes->{{3.6622090626585145`*^9, 3.662209064498454*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EndPackage", "[", "]"}], ";"}]], "Code",
+ CellChangeTimes->{{3.6622090626585145`*^9, 3.662209069497596*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+AutoGeneratedPackage->Automatic,
+WindowSize->{1366, 685},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (December 4, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 98, 1, 101, "Title"],
+Cell[681, 25, 418, 10, 30, "Text"],
+Cell[1102, 37, 773, 24, 68, "Text"],
+Cell[CellGroupData[{
+Cell[1900, 65, 97, 1, 70, "Section"],
+Cell[2000, 68, 167, 3, 52, "Code"],
+Cell[2170, 73, 142, 3, 52, "Code"],
+Cell[2315, 78, 135, 3, 52, "Code"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2487, 86, 146, 2, 70, "Section"],
+Cell[2636, 90, 552, 13, 113, "Code"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3225, 108, 198, 3, 70, "Section"],
+Cell[3426, 113, 258, 6, 52, "Code"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3721, 124, 93, 1, 70, "Section"],
+Cell[3817, 127, 4644, 94, 513, "Code"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8498, 226, 199, 3, 70, "Section"],
+Cell[8700, 231, 345, 8, 52, "Code"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9082, 244, 143, 2, 70, "Section"],
+Cell[9228, 248, 136, 3, 52, "Code"],
+Cell[9367, 253, 143, 3, 52, "Code"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
