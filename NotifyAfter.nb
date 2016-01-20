@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     10686,        305]
-NotebookOptionsPosition[      9538,        260]
-NotebookOutlinePosition[      9917,        276]
-CellTagsIndexPosition[      9874,        273]
+NotebookDataLength[     20207,        504]
+NotebookOptionsPosition[     18663,        448]
+NotebookOutlinePosition[     19042,        464]
+CellTagsIndexPosition[     18999,        461]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -63,6 +63,194 @@ Cell[TextData[{
 
 Cell[CellGroupData[{
 
+Cell["Usage", "Section",
+ CellChangeTimes->{{3.6622087067914214`*^9, 3.6622087080132203`*^9}, {
+  3.6622577690347137`*^9, 3.6622577695689282`*^9}}],
+
+Cell["The usage is simple. The following command:", "Text",
+ CellChangeTimes->{{3.6622576298407927`*^9, 3.6622576701575623`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\t", 
+  RowBox[{"NotifyAfter", "[", 
+   RowBox[{
+    RowBox[{"Pause", "[", "2", "]"}], ";", 
+    RowBox[{"Simplify", "[", 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"Sin", "[", "x", "]"}], "2"], "+", 
+      SuperscriptBox[
+       RowBox[{"Cos", "[", "x", "]"}], "2"]}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{3.662257695395306*^9}],
+
+Cell["will show after two seconds a small dialog like this:", "Text",
+ CellChangeTimes->{{3.6622576298407927`*^9, 3.6622577180614853`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1:eJztnXusXEUdgA/4QmOCfxCBRBMfSYmBmGjNkvQPExAhGBMSUKQY4rbCTTAS
+5WEqQtrykI2PkCoxNUKloJiYBTShFpAAKQ8TtVwSLUK5QLltKU9hb2/pw/be
+9ex5zpx5nDn7umfa70s1u3Pm8Zs553w7M7uc+8nl3zt34uggCK48Jvy/c5et
+OO2KK5Zdfd57wzenX33VJcvfE77YFP5v7VFB0Ht9AgCA53QBAPwEiQGA1yAx
+APAaJAYAXoPEAMBrkBgAeE0fEts/05l9ceuI4gEAqISLxOYOHZzdtWv+wIH4
+7fTjD29dd2P8en5u7n97987NzY02SgAAA44zsX/9uT2z4c652dnQWk9dd97j
+V5y05+23w/TpRzbsePKR0YcJAKDHUWJvvPjC1u8uml19Rqe19JGvH/2rM4+6
+f/XEppVLd1x7ypvPPjOGOAHgMCYIgs2bN6vpYWJ4yF7WLrFwnbjn9dcO7du3
+55Wd26459e9Lg03nB789M7h8cXDtkqP+cWGw/6fnzx08aK5+40SQM7HRsUNh
+qSVrphwzy0ytWdJ32UHaHULxBWEoMfvYcagXoaze94FjCh7TJqqUzsR2PPbo
+c9efs2t1Y+7mRbM3n/LvlZ9+6NKP/vOqj22//uStEx98+fKTZx9/8MDUc/te
+eP7QzH+V0v1d3lVLDesmQmKOh/rOCWCkoCxHg3XdlpPPrPvJfRcF09ccO7/+
+y931X+ze9rnurY23fnbyunM+vOHcYGpZ0Fm5ZOaxvx6afUcpisRqDhKDGpGJ
+y91gXTeJze7YfsfXTth+3Ufm772wu3HZ/B+/0l23+MUff+aGL33o/vOC6StP
+6jz1pKFo4fLuLfbyRWV6MF9zJseyUmLx/LWcX1ixJm/TIr3WCivZ6OiapIRy
+40VHNyalxIblWvJ65QWyvrgmezHFHpWuClPX0tbDxCxLWqE2PO1whaULo2rr
+RRQ6EoPhEOvL3WBdB4kdnJl56ZYrt6w4rtv+Rvfhy+YfunR+w8Xz60/b84tT
+brvgxD+cHez49QpzaXFPLLr4wwThrtNIYEr7oqv7uLdn6zUt3PJ5Ym6O4i5d
+dFQpXWxOiVtTXGoxF0ZaXk2xRKVu85m7prwU8trDs8ZpiFnQGxKD4TB0ib27
+Y3rnzy+bufbE7m1ndB/4Tvcvy+fvOX/+nm92f//V7m+WvHTDZ+9betyb3//4
+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
+vIY/ngsAXoPEAMBrTgAA8Jz/Ax0E958=
+    "], {{0, 193}, {407, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{407, 193},
+  PlotRange->{{0, 407}, {0, 193}}]], "Input",
+ TextAlignment->Center],
+
+Cell["and return the result (which is 1).", "Text",
+ CellChangeTimes->{{3.6622576298407927`*^9, 3.6622577180614853`*^9}, {
+  3.662257791464615*^9, 3.6622578027416496`*^9}, {3.662257861893087*^9, 
+  3.662257892664075*^9}}],
+
+Cell[TextData[{
+ "The code above will also produce a small \[OpenCurlyDoubleQuote]beep\
+\[CloseCurlyDoubleQuote] using ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "\[CloseCurlyQuote]s Beep command. To turn off this, use:"
+}], "Text",
+ CellChangeTimes->{{3.6622578911509285`*^9, 3.6622579057226725`*^9}, {
+  3.662257975038732*^9, 3.662257975163722*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\t", 
+  RowBox[{"NotifyAfter", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Pause", "[", "2", "]"}], ";", 
+     RowBox[{"Simplify", "[", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"Sin", "[", "x", "]"}], "2"], "+", 
+       SuperscriptBox[
+        RowBox[{"Cos", "[", "x", "]"}], "2"]}], "]"}]}], ",", 
+    RowBox[{"Beep", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{
+  3.662257695395306*^9, {3.6622579113394146`*^9, 3.662257915530959*^9}}],
+
+Cell[TextData[{
+ "If you didn\[CloseCurlyQuote]t notice the appeared window, your \
+calculations will ",
+ StyleBox["not",
+  FontSlant->"Italic"],
+ " be paused. They will continue, as if nothing happened. If you have several \
+",
+ StyleBox["NotifyAfter",
+  FontSlant->"Italic"],
+ " calls, in the end, you can have a set of notification windows. For this \
+reason, these windows also contain an input line number (near the filename)."
+}], "Text",
+ CellChangeTimes->{{3.6622578099788284`*^9, 3.6622578532658505`*^9}, {
+  3.6622579359198823`*^9, 3.662258034164362*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
 Cell["Preamble", "Section",
  CellChangeTimes->{{3.6622087067914214`*^9, 3.6622087080132203`*^9}}],
 
@@ -80,7 +268,7 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"Begin", "[", "\"\<`Private`\>\"", "]"}], ";"}]], "Code",
  CellChangeTimes->{3.6622090388667116`*^9}]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -102,7 +290,7 @@ StyleBox[\"Beep\",
 FontSlant->\"Italic\"]\) \[Rule] True/False. Whether a sound must be played \
 when evaluation is complete.\>\""}], ";"}]], "Code",
  CellChangeTimes->{{3.662209347842244*^9, 3.6622094490338597`*^9}}]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -118,7 +306,7 @@ Cell[BoxData[
    RowBox[{"{", 
     RowBox[{"Beep", " ", "\[Rule]", " ", "True"}], "}"}]}], ";"}]], "Code",
  CellChangeTimes->{{3.662209515055667*^9, 3.662209532276015*^9}}]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -220,7 +408,7 @@ being performed right now.\>\""}], "\n", "\t\t\t", "}"}], "]"}], ",", " ",
    3.6622092479950447`*^9, 3.662209291749708*^9}, 3.6622093395290203`*^9, {
    3.6622094790816574`*^9, 3.6622095023639126`*^9}, {3.6622095758045807`*^9, 
    3.6622096253510847`*^9}, {3.662209977706663*^9, 3.662209978155322*^9}}]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -238,7 +426,7 @@ Cell[BoxData[
      "}"}]}], "]"}], ";"}]], "Code",
  CellChangeTimes->{{3.662209347842244*^9, 3.6622093770128946`*^9}, {
   3.6622094673099537`*^9, 3.66220947520969*^9}}]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -255,11 +443,11 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"EndPackage", "[", "]"}], ";"}]], "Code",
  CellChangeTimes->{{3.6622090626585145`*^9, 3.662209069497596*^9}}]
-}, Open  ]]
+}, Closed]]
 }, Open  ]]
 },
 AutoGeneratedPackage->Automatic,
-WindowSize->{1366, 685},
+WindowSize->{1280, 941},
 WindowMargins->{{-8, Automatic}, {Automatic, -8}},
 FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (December 4, 2014)",
 StyleDefinitions->"Default.nb"
@@ -280,32 +468,43 @@ Cell[580, 22, 98, 1, 101, "Title"],
 Cell[681, 25, 418, 10, 30, "Text"],
 Cell[1102, 37, 773, 24, 68, "Text"],
 Cell[CellGroupData[{
-Cell[1900, 65, 97, 1, 70, "Section"],
-Cell[2000, 68, 167, 3, 52, "Code"],
-Cell[2170, 73, 142, 3, 52, "Code"],
-Cell[2315, 78, 135, 3, 52, "Code"]
+Cell[1900, 65, 147, 2, 70, "Section"],
+Cell[2050, 69, 129, 1, 30, "Text"],
+Cell[2182, 72, 372, 11, 33, "Input"],
+Cell[2557, 85, 139, 1, 30, "Text"],
+Cell[2699, 88, 6637, 114, 208, "Input"],
+Cell[9339, 204, 221, 3, 30, "Text"],
+Cell[9563, 209, 361, 8, 30, "Text"],
+Cell[9927, 219, 493, 14, 33, "Input"],
+Cell[10423, 235, 565, 13, 49, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2487, 86, 146, 2, 70, "Section"],
-Cell[2636, 90, 552, 13, 113, "Code"]
-}, Open  ]],
+Cell[11025, 253, 97, 1, 70, "Section"],
+Cell[11125, 256, 167, 3, 52, "Code"],
+Cell[11295, 261, 142, 3, 52, "Code"],
+Cell[11440, 266, 135, 3, 52, "Code"]
+}, Closed]],
 Cell[CellGroupData[{
-Cell[3225, 108, 198, 3, 70, "Section"],
-Cell[3426, 113, 258, 6, 52, "Code"]
-}, Open  ]],
+Cell[11612, 274, 146, 2, 56, "Section"],
+Cell[11761, 278, 552, 13, 113, "Code"]
+}, Closed]],
 Cell[CellGroupData[{
-Cell[3721, 124, 93, 1, 70, "Section"],
-Cell[3817, 127, 4644, 94, 513, "Code"]
-}, Open  ]],
+Cell[12350, 296, 198, 3, 56, "Section"],
+Cell[12551, 301, 258, 6, 52, "Code"]
+}, Closed]],
 Cell[CellGroupData[{
-Cell[8498, 226, 199, 3, 70, "Section"],
-Cell[8700, 231, 345, 8, 52, "Code"]
-}, Open  ]],
+Cell[12846, 312, 93, 1, 56, "Section"],
+Cell[12942, 315, 4644, 94, 513, "Code"]
+}, Closed]],
 Cell[CellGroupData[{
-Cell[9082, 244, 143, 2, 70, "Section"],
-Cell[9228, 248, 136, 3, 52, "Code"],
-Cell[9367, 253, 143, 3, 52, "Code"]
-}, Open  ]]
+Cell[17623, 414, 199, 3, 56, "Section"],
+Cell[17825, 419, 345, 8, 52, "Code"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[18207, 432, 143, 2, 56, "Section"],
+Cell[18353, 436, 136, 3, 52, "Code"],
+Cell[18492, 441, 143, 3, 52, "Code"]
+}, Closed]]
 }, Open  ]]
 }
 ]
